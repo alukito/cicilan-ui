@@ -47,7 +47,7 @@
 </script>
 
 <main>
-    <h1>Chat with Bot</h1>
+    <h1>KPR Assistant</h1>
     <div class="chat-container" bind:this={chatContainer}>
         {#each messages as message, i (i)}
             <div 
