@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount, afterUpdate } from 'svelte';
     import { fade, fly } from 'svelte/transition';
+    import { PUBLIC_BACKEND_URL } from '$env/static/public';
 
     let messages: { text: string; isUser: boolean }[] = [];
     let inputMessage = '';
@@ -16,7 +17,7 @@
 
         try {
             // Send message to bot and get response
-            const response = await fetch('http://localhost:8000/mortgage/invoke', {
+            const response = await fetch(PUBLIC_BACKEND_URL + '/mortgage/invoke', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
