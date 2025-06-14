@@ -1,1 +1,1 @@
-export const env={"PUBLIC_BACKEND_URL":"https://onrender.com/alukito"}
+export const env={"PUBLIC_BACKEND_URL":"https://cicilan.onrender.com"}
