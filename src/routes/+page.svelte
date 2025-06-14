@@ -2,6 +2,7 @@
     import { onMount, afterUpdate } from 'svelte';
     import { fade, fly } from 'svelte/transition';
     import { PUBLIC_BACKEND_URL } from '$env/static/public';
+    import SvelteMarkdown from 'svelte-markdown';
 
     let messages: { text: string; isUser: boolean }[] = [];
     let inputMessage = '';
@@ -54,7 +55,7 @@
                 transition:fly="{{ y: 20, duration: 300 }}"
             >
                 <div class="message-content">
-                    {message.text}
+                    <SvelteMarkdown source={message.text} />
                 </div>
             </div>
         {/each}

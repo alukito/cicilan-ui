@@ -13,7 +13,7 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-        "deploy": "pnpm build && pnpx gh-pages -d build -t true"
+		"deploy": "pnpm build && pnpx gh-pages -d build -t"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -37,6 +37,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-static": "^3.0.8"
+		"@sveltejs/adapter-static": "^3.0.8",
+		"svelte-markdown": "^0.4.1"
 	}
 }
